@@ -4,7 +4,6 @@ SELECT
 	business_id,
 	event_type,
     occurences,
-    AVG(occurences) OVER (PARTITION BY event_type) AS avg_occurences,
     CASE WHEN occurences > AVG(occurences) OVER (PARTITION BY event_type) THEN 'yes' ELSE 'no' END AS greater_than_avg
 FROM events)
 SELECT 
