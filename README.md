@@ -1,1 +1,1 @@
-# MySQL questions from leetcode
+# MySQL practices from leetcode
